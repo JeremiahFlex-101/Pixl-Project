@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudySphere – Empower Your Learning Journey</title>
+  <meta name="description" content="StudySphere helps secondary school students study smarter with interactive quizzes, flashcards, progress tracking, and focused study tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        StudySphere
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html" class="active">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="timer.html">Study Timer</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Study Smarter.<br>Achieve More.</h1>
+        <p>StudySphere is your personal learning companion for secondary school. Master subjects with interactive quizzes, flashcards, progress tracking, and focused study sessions.</p>
+        <div class="hero-actions">
+          <a href="quizzes.html" class="btn btn-primary btn-lg">Start a Quiz</a>
+          <a href="dashboard.html" class="btn btn-secondary btn-lg">View Progress</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-icon">📈</div>
+            <div>
+              <strong>Your Progress</strong>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Keep the streak going!</div>
+            </div>
+          </div>
+          <div style="margin-bottom: 0.5rem; font-size: 0.9rem;">Overall Mastery</div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 68%"></div>
+          </div>
+          <div class="stat-row">
+            <span>12 quizzes</span>
+            <span>🔥 5-day streak</span>
+          </div>
+          <div class="stat-row" style="margin-top: 0.5rem;">
+            <span>Math • Science • English</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Explore Subjects</h2>
+        <p>Build strong foundations across core secondary school subjects with curated practice and revision tools.</p>
+      </div>
+      <div class="cards-grid">
+        <a href="subjects.html#math" class="card">
+          <div class="card-icon math">📐</div>
+          <h3>Mathematics</h3>
+          <p>Algebra, geometry, arithmetic, and problem-solving skills that form the backbone of STEM.</p>
+          <span class="card-link">Explore →</span>
+        </a>
+        <a href="subjects.html#science" class="card">
+          <div class="card-icon science">🔬</div>
+          <h3>Science</h3>
+          <p>Physics, chemistry, and biology concepts explained simply with interactive practice.</p>
+          <span class="card-link">Explore →</span>
+        </a>
+        <a href="subjects.html#english" class="card">
+          <div class="card-icon english">📖</div>
+          <h3>English</h3>
+          <p>Grammar, vocabulary, literature, and writing skills to express yourself with confidence.</p>
+          <span class="card-link">Explore →</span>
+        </a>
+        <a href="subjects.html#history" class="card">
+          <div class="card-icon history">🏛️</div>
+          <h3>History</h3>
+          <p>Key events, civilizations, and movements that shaped the modern world.</p>
+          <span class="card-link">Explore →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Everything You Need to Succeed</h2>
+        <p>Powerful yet simple tools designed specifically for secondary school students.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon quiz">📝</div>
+          <h3>Interactive Quizzes</h3>
+          <p>Test your knowledge with instant feedback. Track scores and improve over time.</p>
+          <a href="quizzes.html" class="card-link">Take a Quiz →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon flash">🃏</div>
+          <h3>Smart Flashcards</h3>
+          <p>Active recall made easy. Flip cards, mark what you know, and master key concepts.</p>
+          <a href="flashcards.html" class="card-link">Review Cards →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon timer">⏱️</div>
+          <h3>Focus Timer</h3>
+          <p>Pomodoro-style sessions help you study with focus and take healthy breaks.</p>
+          <a href="timer.html" class="card-link">Start Timer →</a>
+        </div>
+        <div class="card">
+          <div class="card-icon" style="background: linear-gradient(135deg, #6366f1, #a855f7);">📊</div>
+          <h3>Progress Dashboard</h3>
+          <p>See your streaks, average scores, and subject performance at a glance.</p>
+          <a href="dashboard.html" class="card-link">View Dashboard →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container text-center">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to level up your studies?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+        No sign-up required. Your progress is saved locally on this device. Start practicing in seconds.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="quizzes.html" class="btn btn-primary btn-lg">Begin Practicing</a>
+        <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">🌐</div>
+            StudySphere
+          </div>
+          <p>Helping secondary school students build knowledge, confidence, and lasting study habits.</p>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="subjects.html">Subjects</a></li>
+            <li><a href="quizzes.html">Quizzes</a></li>
+            <li><a href="flashcards.html">Flashcards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul class="footer-links">
+            <li><a href="timer.html">Study Timer</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>About</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 StudySphere. Built for students, by learners. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="interact.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzes – StudySphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        StudySphere
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="quizzes.html" class="active">Quizzes</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="timer.html">Study Timer</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Practice Quizzes</h2>
+        <p>Test yourself with short, focused quizzes. Get instant feedback and track your improvement over time.</p>
+      </div>
+
+      <div id="quizArea">
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        © 2026 StudySphere. Built for students, by learners.
+      </div>
+    </div>
+  </footer>
+
+  <script src="interact.js"></script>
+</body>
+</html>

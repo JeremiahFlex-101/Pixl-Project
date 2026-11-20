@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – StudySphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        StudySphere
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="timer.html">Study Timer</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Your Progress</h2>
+        <p>Track your learning journey. All data is stored locally on your device.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="statQuizzes">0</div>
+          <div class="stat-label">Quizzes Taken</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statAvg">0%</div>
+          <div class="stat-label">Average Score</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statFlash">0</div>
+          <div class="stat-label">Cards Reviewed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statMinutes">0</div>
+          <div class="stat-label">Study Minutes</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statStreak">0</div>
+          <div class="stat-label">Day Streak 🔥</div>
+        </div>
+      </div>
+
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="card">
+          <h3 style="margin-bottom: 1.25rem;">Subject Performance</h3>
+          <div id="subjectPerformance">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom: 1.25rem;">Recent Activity</h3>
+          <div id="historyList">
+            <!-- Filled by JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="quizzes.html" class="btn btn-primary">Take Another Quiz</a>
+        <button class="btn btn-outline" style="margin-left: 0.75rem;" onclick="if(confirm('Reset all progress data?')){localStorage.clear(); location.reload();}">Reset Progress</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        © 2026 StudySphere. Built for students, by learners.
+      </div>
+    </div>
+  </footer>
+
+  <script src="interact.js"></script>
+</body>
+</html>

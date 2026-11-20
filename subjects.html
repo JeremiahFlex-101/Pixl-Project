@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects – StudySphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        StudySphere
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subjects.html" class="active">Subjects</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="timer.html">Study Timer</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Core Subjects</h2>
+        <p>Deep-dive into the subjects that matter most for secondary school success. Practice, revise, and track your growth.</p>
+      </div>
+
+      <!-- Mathematics -->
+      <div id="math" class="card" style="margin-bottom: 2rem;">
+        <div style="display: flex; gap: 1.25rem; align-items: flex-start; flex-wrap: wrap;">
+          <div class="card-icon math" style="margin-bottom: 0;">📐</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Mathematics</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+              From basic arithmetic and algebra to geometry and introductory statistics. Build logical thinking and problem-solving skills essential for every field.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="quizzes.html" class="btn btn-primary btn-sm" onclick="sessionStorage.setItem('preferredSubject','math')">Practice Quiz</a>
+              <a href="flashcards.html" class="btn btn-outline btn-sm">Flashcards</a>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <strong style="font-size: 0.9rem;">Key Topics:</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Algebra</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Geometry</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Percentages</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Equations</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Sequences</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Science -->
+      <div id="science" class="card" style="margin-bottom: 2rem;">
+        <div style="display: flex; gap: 1.25rem; align-items: flex-start; flex-wrap: wrap;">
+          <div class="card-icon science" style="margin-bottom: 0;">🔬</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Science</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+              Explore the natural world through physics, chemistry, and biology. Understand forces, matter, energy, living systems, and the scientific method.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="quizzes.html" class="btn btn-primary btn-sm">Practice Quiz</a>
+              <a href="flashcards.html" class="btn btn-outline btn-sm">Flashcards</a>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <strong style="font-size: 0.9rem;">Key Topics:</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Physics</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Chemistry</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Biology</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Cells</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Forces</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- English -->
+      <div id="english" class="card" style="margin-bottom: 2rem;">
+        <div style="display: flex; gap: 1.25rem; align-items: flex-start; flex-wrap: wrap;">
+          <div class="card-icon english" style="margin-bottom: 0;">📖</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">English</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+              Strengthen reading comprehension, grammar, vocabulary, and writing. Develop the communication skills that open doors everywhere.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="quizzes.html" class="btn btn-primary btn-sm">Practice Quiz</a>
+              <a href="flashcards.html" class="btn btn-outline btn-sm">Flashcards</a>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <strong style="font-size: 0.9rem;">Key Topics:</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Grammar</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Vocabulary</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Literature</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Writing</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Figures of Speech</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- History -->
+      <div id="history" class="card">
+        <div style="display: flex; gap: 1.25rem; align-items: flex-start; flex-wrap: wrap;">
+          <div class="card-icon history" style="margin-bottom: 0;">🏛️</div>
+          <div style="flex: 1; min-width: 250px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">History</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;">
+              Understand the past to make sense of the present. Study major civilizations, wars, revolutions, and the ideas that shaped societies.
+            </p>
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="quizzes.html" class="btn btn-primary btn-sm">Practice Quiz</a>
+              <a href="flashcards.html" class="btn btn-outline btn-sm">Flashcards</a>
+            </div>
+            <div style="margin-top: 1.25rem;">
+              <strong style="font-size: 0.9rem;">Key Topics:</strong>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Ancient Civilizations</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">World Wars</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Revolutions</span>
+                <span class="subject-chip" style="cursor: default; font-size: 0.8rem;">Exploration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        © 2026 StudySphere. Built for students, by learners.
+      </div>
+    </div>
+  </footer>
+
+  <script src="interact.js"></script>
+</body>
+</html>

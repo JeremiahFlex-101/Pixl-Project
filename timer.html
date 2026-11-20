@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Timer – StudySphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="home.html" class="logo">
+        <div class="logo-icon">🌐</div>
+        StudySphere
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="subjects.html">Subjects</a></li>
+        <li><a href="quizzes.html">Quizzes</a></li>
+        <li><a href="flashcards.html">Flashcards</a></li>
+        <li><a href="timer.html" class="active">Study Timer</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Focus Timer</h2>
+        <p>Use the Pomodoro technique: 25 minutes of focused study followed by a 5-minute break. Stay consistent and watch your knowledge grow.</p>
+      </div>
+
+      <div class="card" style="max-width: 480px; margin: 0 auto; text-align: center;">
+        <div style="display: flex; justify-content: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <button class="subject-chip" id="focusModeBtn" onclick="setTimerMode('focus')">Focus (25m)</button>
+          <button class="subject-chip" id="breakModeBtn" onclick="setTimerMode('break')">Break (5m)</button>
+        </div>
+
+        <div class="timer-display" id="timerDisplay">25:00</div>
+
+        <div class="timer-controls">
+          <button class="btn btn-primary btn-lg" id="startTimerBtn" onclick="startTimer()">▶ Start</button>
+          <button class="btn btn-outline btn-lg hidden" id="pauseTimerBtn" onclick="pauseTimer()">⏸ Pause</button>
+          <button class="btn btn-outline" onclick="resetTimer()">Reset</button>
+        </div>
+
+        <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
+          Completed focus sessions are automatically added to your study time on the dashboard.
+        </p>
+      </div>
+
+      <div class="cards-grid" style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div class="card">
+          <h3 style="margin-bottom: 0.5rem;">🍅 How it works</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            1. Choose a task<br>
+            2. Work for 25 minutes<br>
+            3. Take a 5-minute break<br>
+            4. After 4 sessions, take a longer break
+          </p>
+        </div>
+        <div class="card">
+          <h3 style="margin-bottom: 0.5rem;">💡 Tips for success</h3>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Put your phone away, close extra tabs, and focus on one subject at a time. Small consistent sessions beat marathon cramming.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none; padding-top: 0;">
+        © 2026 StudySphere. Built for students, by learners.
+      </div>
+    </div>
+  </footer>
+
+  <script src="interact.js"></script>
+</body>
+</html>
