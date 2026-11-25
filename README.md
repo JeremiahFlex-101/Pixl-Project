@@ -31,17 +31,15 @@ Then visit `http://localhost:8000`.
 
 ```
 studysphere/
-├── index.html          # Home page
+├── home.html          # Home page
 ├── subjects.html       # Subject overview
 ├── quizzes.html        # Interactive quiz engine
 ├── flashcards.html     # Flashcard study tool
 ├── timer.html          # Pomodoro focus timer
 ├── dashboard.html      # Progress & stats
 ├── about.html          # About the project
-├── css/
-│   └── style.css       # All styles (CSS variables, dark mode, responsive)
-├── js/
-│   └── app.js          # Quiz engine, flashcards, timer, storage, theme
+├── design.css           # All styles (CSS variables, dark mode, responsive)
+├── interact.js          # Quiz engine, flashcards, timer, storage, theme
 └── README.md
 ```
 
@@ -54,9 +52,9 @@ studysphere/
 
 ## Customization
 
-- Add more questions in `js/app.js` under `QUIZ_DATA`
+- Add more questions in `interact.js` under `QUIZ_DATA`
 - Add more flashcards under `FLASHCARD_DATA`
-- Adjust colors in `css/style.css` via the `:root` variables
+- Adjust colors in `design.css` via the `:root` variables
 
 ---
 
