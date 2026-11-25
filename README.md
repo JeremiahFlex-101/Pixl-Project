@@ -14,7 +14,7 @@ A fully functional, modern educational website designed to help secondary school
 
 ## How to Use
 
-1. Open `index.html` in any modern web browser (Chrome, Firefox, Edge, Safari).
+1. Open `home.html` in any modern web browser (Chrome, Firefox, Edge, Safari).
 2. Or serve the folder with any static file server:
 
 ```bash
